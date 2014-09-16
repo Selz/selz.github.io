@@ -1,0 +1,64 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+$base-font-size: 						15;
+$small-font-size: 						13;
+$large-font-size: 						17;
+$base-line-height:						1.7;
+
+$container-width: 						800px;
+$container-wide-width: 					1140px;
+
+$gutter-width:     30px;
+
+$base-radius: 		4px;
+
+$text-color:       #111;
+$text-color-light: #fff;
+$background-color: #fff;
+$brand-color:      #6d48cc;
+
+$grey-color:        mix(#555, #008cdd, 91%);
+$grey-color-light:  mix(#777, #008cdd, 92%);
+$grey-color-dark:   mix(#333, #008cdd, 90%);
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+// type mixin
+
+@mixin font-size($font-size: 16){
+    $rem: ($font-size / 10);
+    font-size: $font-size * 1px;
+    font-size: unquote("${rem}rem");
+}
+
+
+
+// Using media queries with like this:
+// @include media-query($palm) {
+//     .container {
+//         padding-right: $gutter-width / 2;
+//         padding-left: $gutter-width / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
