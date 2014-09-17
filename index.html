@@ -8,7 +8,7 @@ layout: default
   
     {% if repository.name != 'selz.github.io' and repository.fork == false %}
     
-      <a class="repo">
+      <a href="{{ repository.html_url}}" class="repo">
         <h2>{{ repository.name }} </h2>
         <p>{{ repository.description }}</p>
         <span class="stars">&#x02605;</span>
