@@ -5,9 +5,11 @@ layout: default
 <div class="home">
 
   {% for repository in site.github.public_repositories %}
-    <h2>{{ repository.name }} </h2>
-    <p>{{ repository.description }}</p>
-    <span>{{ repository.stargazers_count }}</span>
+    {% if repository.name != 'selz.github.io' && repository.fork == 'false' %}
+      <h2>{{ repository.name }} </h2>
+      <p>{{ repository.description }}</p>
+      <span>{{ repository.stargazers_count }}</span>
+    {% endif %}
   {% endfor %}
 
 
