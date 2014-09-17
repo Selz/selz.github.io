@@ -103,18 +103,16 @@
  	border: 2px solid $grey-color-dark;
  	border-radius: $base-radius*2;
  	margin: $gutter-width/2 auto;
+ 	padding:$gutter-width/2;
  }
  
  .stars{
- 	@include font-size($large-font-size);
+ 	@include font-size(20);
  	
- 	&:before{
- 		content:"&#9733;";
- 	}
  }
  
  .triangle{
- 	@include font-size($large-font-size);
+ 	@include font-size(30);
  }
 
 
