@@ -95,6 +95,28 @@
 }
 
 
+/**
+ * Main page body
+ */
+ 
+ .repo{
+ 	border: 2px solid $grey-color-dark;
+ 	border-radius: $base-radius*2;
+ 	margin: $gutter-width/2 auto;
+ }
+ 
+ .stars{
+ 	@include font-size($large-font-size);
+ 	
+ 	&:before{
+ 		content:"&#x02605;";
+ 	}
+ }
+ 
+ .triangle{
+ 	@include font-size($large-font-size);
+ }
+
 
 /**
  * Site footer
@@ -105,7 +127,7 @@
 
 .footer-heading {
     font-size: 18px;
-    margin-bottom: $gutter-width / 2;
+    margin-bottom: $gutter-width/2;
 }
 
 .contact-list,
