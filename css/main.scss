@@ -19,14 +19,14 @@ $gutter-width:     30px;
 
 $base-radius: 		4px;
 
-$text-color:       #111;
-$text-color-light: #fff;
-$background-color: #fff;
-$brand-color:      #6d48cc;
-
 $grey-color:        mix(#555, #008cdd, 91%);
 $grey-color-light:  mix(#777, #008cdd, 92%);
 $grey-color-dark:   mix(#333, #008cdd, 90%);
+
+$text-color:       $grey-color-dark;
+$text-color-light: #fff;
+$background-color: #fff;
+$brand-color:      #6d48cc;
 
 $on-palm:          600px;
 $on-laptop:        800px;
