@@ -100,19 +100,24 @@
  */
  
  .repo{
+ 	position: relative;
  	border: 2px solid $grey-color-dark;
  	border-radius: $base-radius*2;
  	margin: $gutter-width/2 auto;
- 	padding:$gutter-width/2;
+ 	padding: $gutter-width/2;
  }
  
  .stars{
- 	@include font-size(20);
+ 	@include font-size(30);
  	
  }
  
  .triangle{
- 	@include font-size(30);
+ 	@include font-size(90);
+ 	
+ 	position: absolute;
+ 	left: $gutter-width/2;
+ 	top: $gutter-width;
  }
 
 
