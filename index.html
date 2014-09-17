@@ -8,13 +8,13 @@ layout: default
   
     {% if repository.name != 'selz.github.io' and repository.fork == false %}
     
-      <div class="repo">
+      <a class="repo">
         <h2>{{ repository.name }} </h2>
         <p>{{ repository.description }}</p>
         <span class="stars">&#x02605;</span>
         <span>{{ repository.stargazers_count }}</span>
         <span class="triangle">&#x025B8;</span>
-      </div>
+      </a>
       
     {% endif %}
     
