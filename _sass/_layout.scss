@@ -99,12 +99,21 @@
  * Main page body
  */
  
+ .home{
+ 	margin-top:$gutter-width*2;
+ }
+ 
  .repo{
  	position: relative;
  	border: 2px solid $grey-color-dark;
  	border-radius: $base-radius*2;
- 	margin: $gutter-width/2 auto;
+ 	margin: $gutter-width auto;
  	padding: $gutter-width/2;
+ 	color:$grey-color-dark;
+ 	
+ 	p{
+ 		margin-right:$gutter-width*2;
+ 	}
  	
  	span{
  		display: inline-block;
