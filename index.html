@@ -2,8 +2,6 @@
 layout: default
 ---
 
-<div class="home">
-
   {% for repository in site.github.public_repositories %}
   
     {% if repository.name != 'selz.github.io' and repository.fork == false %}
@@ -18,5 +16,3 @@ layout: default
     {% endif %}
     
   {% endfor %}
-
-</div>
