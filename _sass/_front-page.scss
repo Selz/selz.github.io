@@ -20,23 +20,27 @@
  	
  	span{
  		display: inline-block;
-		vertical-align: top;
 
  	}
  }
  
- .stars{
- 	@include font-size(30);
+ .star{
  	
- 	line-height: 0.7;
+	 &:before{
+	 	@include font-size(24);
+	 	padding-right:5px;
+	 }
+	 
+ 	@include font-size(16);
+ 	line-height: 0.2;
+ 	vertical-align:middle;
  	
  }
  
  .triangle{
- 	@include font-size(90);
+ 	@include font-size(50);
  	
  	position: absolute;
  	right: $gutter-width/2;
- 	top: 41%;
-	line-height: 0;
+ 	top: 25%;
  }
