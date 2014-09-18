@@ -52,7 +52,7 @@
  	line-height: 0.5;
  	vertical-align: bottom;
  	
- 	@include transition(color);
+ 	@include transition(color .3s ease);
  	
  }
  
@@ -65,5 +65,5 @@
  	top: 50%;
  	color:$gray-lightest;
  	
- 	@include transition(color);
+ 	@include transition(color .3s ease);
  }
