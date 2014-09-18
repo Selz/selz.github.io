@@ -18,7 +18,8 @@
  		border-color:$brand-color;
  	}
  	
- 	&:hover > .triangle{
+ 	&:hover > .triangle,
+ 	&:hover > .star{
  		color:$brand-color;
  	}
  	
