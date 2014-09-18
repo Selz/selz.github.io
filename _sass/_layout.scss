@@ -7,6 +7,10 @@
 	// Positioning context for the mobile navigation icon
 	position: relative;
 	
+	// Smooth fonts
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	
 	h1 {
 		padding-top: $gutter-width/2;
 		color: $text-color-light;
