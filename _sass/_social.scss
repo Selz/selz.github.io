@@ -1,0 +1,211 @@
+/**
+ * Social sharing buttons
+ */
+ 
+ 
+ // Mixin for button styles
+@mixin btn-styles($background-color, $border-color: darken($background-color, 5%)) {
+	background-color: $background-color;
+    background-image: linear-gradient(to bottom, lighten($background-color, 5%), $background-color);
+    border-color: $border-color;
+    
+    &:hover,
+    &:focus,
+    &.focus {
+        border-color: darken($border-color, 10%);
+    }
+    &:focus,
+    &.focus {
+    	box-shadow: 0 0 5px 0 $border-color;
+    }
+}
+ 
+ .btn {  
+    // Layout
+    position: relative;
+	display: inline-block;
+	padding: $button-padding-default $button-padding-default * 2;
+	cursor: pointer;
+	vertical-align: middle;
+
+    // Type
+    @include font-size($base-font-size);
+    line-height: $base-line-height;
+    color: $gray-light;
+	text-shadow: 0 1px 0 #fff;
+	text-align: center;
+	font-weight: 600;
+	@include font-smoothing(on);
+	user-select: none;
+	
+	// Mixins
+	transition: background .3s ease, border .3s ease;
+	border-radius: $button-radius;
+			
+	// Default
+	border: 1px solid;
+
+	// Default button style
+	@include btn-styles(#fff, $button-color-default);
+
+	// Caret within a default button
+	.caret {
+        border-top-color: $gray-light;
+        
+        &.caret-flipped {
+            border-bottom-color: $gray-light;
+        }
+	}
+
+	// States for default
+	&:hover,
+	&:focus,
+	&.focus,
+	&:active,
+	&.active {
+		color: $gray-light;
+	}
+	&:focus,
+	&.focus {
+		outline: none;
+	}
+	&:active,
+	&.active {
+		outline: none;
+		top: 1px;
+	}
+	// Disabled
+	&.disabled,
+	&[disabled] {
+		pointer-events: none;
+		opacity: .5;
+	}
+	
+	// Loading
+	&.loading {
+		pointer-events: none;
+		color: rgba(0,0,0,0) !important;
+		text-shadow: none;
+		position: relative;
+		
+		[class^="logo-"] {
+			opacity: 0;
+		}
+		.alpha-spinner {
+			position: absolute;
+			z-index: 2;
+			left: 50%;
+			top: 50%;
+			margin: -12px 0 0 -12px;
+		}
+	}
+
+	// Variants
+	
+	&-facebook {
+		@include btn-styles($color-facebook);
+	}
+	&-twitter {
+		@include btn-styles($color-twitter);
+	}
+	&-google {
+		@include btn-styles($color-google-plus);
+	}
+
+
+	// Variants
+	
+	&-facebook,
+	&-twitter,
+	&-google {
+	    color: #fff;
+		text-shadow: 0 -1px 0 rgba(0,0,0, .25); 
+		
+		.caret {
+    		border-top-color: #fff;
+    		
+    		&.caret-flipped {
+                border-bottom-color: #fff;
+            }
+		}
+		
+		&:hover,
+		&:focus,
+		&:active {
+			color: #fff;
+		}
+	}
+	
+	// Sizes & Rounded
+	&-small {
+		@include font-size($small-font-size);
+		padding: $button-padding-small $button-padding-small * 2.5;
+	}
+    &-large {
+		@include font-size($large-font-size);
+        padding: $button-padding-large $button-padding-large * 2;
+	}
+	&-rounded { 
+		border-radius: 100px;
+		padding-left: 30px;
+        padding-right: 30px;
+	}
+	
+	// Fixed widths
+	&-short {
+		min-width: 100px;
+	}
+    &-mid {
+		min-width: 150px;
+	}
+	&-long {
+		min-width: 200px;
+	}
+
+	// Block level
+	&-block {
+		display: block;
+		width: 100%;
+	}
+}
+
+.btn-addon {
+	white-space: nowrap;
+	display: inline-block;
+	vertical-align: middle;
+}
+.btn-count {
+	@include arrow-left();
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 7px;
+	padding: $button-padding-default $button-padding-default * 2;
+	
+	background: #fff;
+	border: 1px solid $gray-lightest;
+	border-radius: $button-radius;
+	
+	&::after {
+		width: 6px;
+		height: 6px;
+		left: -4px;
+		margin-top: -3px;
+	}
+}
+.btn-small + .btn-count {
+	padding: ($button-padding-small - 2) $button-padding-small * 2;
+}
+.btn-large + .btn-count {
+    padding: ($button-padding-large - 1) $button-padding-large * 2;
+}
+
+.article-social {
+	padding: 10px 0;
+	text-align: center;	
+}
+
+.share-social {
+	> span {
+		margin: 5px;
+	}
+}

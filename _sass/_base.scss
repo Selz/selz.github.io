@@ -13,9 +13,16 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+ 
+html {
+	font-size: 62.5%; // Make 1rem = 10px;
+}
+
 body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
+
+    @include font-size($base-font-size);
+	
+	font-family: $base-font-family;
     line-height: $base-line-height;
     font-weight: 300;
     color: $text-color;
@@ -103,8 +110,8 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    color: $gray;
+    border-left: 4px solid $gray-light;
     padding-left: $gutter-width / 2;
     font-size: 18px;
     letter-spacing: -1px;
@@ -123,7 +130,7 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid $gray-light;
     border-radius: 3px;
     background-color: #eef;
 }
@@ -194,7 +201,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: $gray;
         }
     }
 }

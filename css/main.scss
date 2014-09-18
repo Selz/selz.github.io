@@ -1,12 +1,41 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
 @charset "utf-8";
 
 
+///////////
+// Fonts //
 
-// Our variables
-$base-font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+
+@font-face {
+    font-family: 'Glyphicons';
+    src: url('https://d33i624pw6jj68.cloudfront.net/assets/fonts/glyphicons/glyphicons-regular.eot');
+    src: url('https://d33i624pw6jj68.cloudfront.net/assets/fonts/glyphicons/glyphicons-regular.eot?#iefix') format('embedded-opentype'),
+         url('https://d33i624pw6jj68.cloudfront.net/assets/fonts/glyphicons/glyphicons-regular.woff') format('woff'),
+         url('https://d33i624pw6jj68.cloudfront.net/assets/fonts/glyphicons/glyphicons-regular.ttf') format('truetype'),
+         url('https://d33i624pw6jj68.cloudfront.net/assets/fonts/glyphicons/glyphicons-regular.svg#glyphiconsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Glyphicons Social';
+    src: url('https://d33i624pw6jj68.cloudfront.net/assets/fonts/glyphicons/glyphicons-social-regular.eot');
+    src: url('https://d33i624pw6jj68.cloudfront.net/assets/fonts/glyphicons/glyphicons-social-regular.eot?#iefix') format('embedded-opentype'),
+         url('https://d33i624pw6jj68.cloudfront.net/assets/fonts/glyphicons/glyphicons-social-regular.woff') format('woff'),
+         url('https://d33i624pw6jj68.cloudfront.net/assets/fonts/glyphicons/glyphicons-social-regular.ttf') format('truetype'),
+         url('https://d33i624pw6jj68.cloudfront.net/assets/fonts/glyphicons/glyphicons-social-regular.svg#glyphicons_socialregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+///////////////
+// Variables //
+
+
+$base-font-family: 						"Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
 $base-font-size: 						15;
 $small-font-size: 						13;
 $large-font-size: 						17;
@@ -15,50 +44,142 @@ $base-line-height:						1.7;
 $container-width: 						800px;
 $container-wide-width: 					1140px;
 
-$gutter-width:     30px;
+$gutter-width:     						30px;
 
-$base-radius: 		4px;
+$base-radius: 							4px;
 
-$grey-color:        mix(#555, #008cdd, 91%);
-$grey-color-light:  mix(#777, #008cdd, 92%);
-$grey-color-dark:   mix(#333, #008cdd, 90%);
+$gray:        							mix(#555, #008cdd, 91%);
+$gray-light:  							mix(#777, #008cdd, 92%);
+$gray-dark:   							mix(#333, #008cdd, 90%);
+$gray-lightest:							mix(#d3d3d3, #008cdd, 95%);
+$gray-mega-light:						mix(#eee, #008cdd, 97%);
+$gray-turbo-light:						mix(#f4f4f4, #008cdd, 96%);
 
-$text-color:       $grey-color-dark;
-$text-color-light: #fff;
-$background-color: #fff;
-$brand-color:      #6d48cc;
+$text-color:       						$gray-dark;
+$text-color-light: 						#fff;
+$background-color: 						#fff;
+$brand-color:      						#6d48cc;
 
-$on-palm:          600px;
-$on-laptop:        800px;
+$color-facebook:	  #3c569a;
+$color-twitter:		  #0f94ff; 
+$color-google-plus:	  #de4c35; 
+
+$button-radius:	         $base-radius;
+$button-padding-default: 7px;
+$button-padding-small: 	 5px;	
+$button-padding-large: 	 8px;
+$button-color-default:	 $gray-mega-light;
+
+$section-border-color: 					lighten($gray-turbo-light, 2%);
+
+$base-icon-size: 						$base-font-size;
+$small-icon-size: 						16;
+
+
+/////////////
+// Mixins //
+
 
 // type mixin
 
 @mixin font-size($font-size: 16){
     $rem: ($font-size / 10);
     font-size: $font-size * 1px;
-    font-size: unquote("${rem}rem");
+    font-size: $rem+rem;
+}
+
+// font smoothing mixin
+
+@mixin font-smoothing($mode: on) {
+	
+	@if $mode == on{
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+	}
+	@else {
+		-moz-osx-font-smoothing: auto;
+		-webkit-font-smoothing: subpixel-antialiased;
+	}
+}
+
+// arrows mixins
+
+@mixin arrow-left {
+	@include arrow("left");
+}
+@mixin arrow-right {
+	@include arrow("right");
+}
+@mixin arrow-top {
+	@include arrow("top");
+}
+@mixin arrow-bottom {
+	@include arrow("bottom");
+}
+@mixin arrow($position) {
+	position: relative;
+	
+	&::after {
+		content: "";
+		position: absolute;
+		width: 8px; 
+		height: 8px;
+		
+		border-style: inherit;
+		border-color: inherit;
+		border-width: 1px 0 0 1px;
+		background: inherit;
+	}
+	
+	@if $position == "left" {
+			&::after {
+			top: 50%;
+			left: -5px;
+			margin-top: -4px;
+			transform: rotate(-45deg);
+		}
+	}
+	
+	@else if $position == "right" {
+			&::after {
+			top: 50%;
+			right: -5px;
+			margin-top: -4px;
+			transform: rotate(135deg);
+		}
+	}
+	
+	@else if $position == "top" {
+			&::after {
+			top: 50%;
+			right: -5px;
+			margin-top: -4px;
+			transform: rotate(45deg);
+		}
+	}
+	
+	@else{
+			&::after {
+			left: 50%;
+			bottom: -5px;
+			margin-left: -4px;
+			transform: rotate(-135deg);
+		}
+	}
+	
 }
 
 
-
-// Using media queries with like this:
-// @include media-query($palm) {
-//     .container {
-//         padding-right: $gutter-width / 2;
-//         padding-left: $gutter-width / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
+/////////////
+// Imports //
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
         "layout",
-        "syntax-highlighting"
+		"front-page",
+        "syntax-highlighting",
+		"social",
+		"icons"
 ;

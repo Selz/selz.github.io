@@ -1,0 +1,42 @@
+/**
+ * Main page body
+ */
+ 
+ .home{
+ 	margin-top:$gutter-width*2;
+ }
+ 
+ .repo{
+ 	display:block;
+ 	position: relative;
+ 	border: 2px solid $gray-dark;
+ 	border-radius: $base-radius*2;
+ 	margin: $gutter-width auto;
+ 	padding: $gutter-width/2;
+ 	
+ 	p{
+ 		margin-right:$gutter-width*2;
+ 	}
+ 	
+ 	span{
+ 		display: inline-block;
+		vertical-align: top;
+
+ 	}
+ }
+ 
+ .stars{
+ 	@include font-size(30);
+ 	
+ 	line-height: 0.7;
+ 	
+ }
+ 
+ .triangle{
+ 	@include font-size(90);
+ 	
+ 	position: absolute;
+ 	right: $gutter-width/2;
+ 	top: 41%;
+	line-height: 0;
+ }
