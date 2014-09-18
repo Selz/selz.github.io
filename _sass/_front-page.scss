@@ -27,7 +27,7 @@
  .star{
  	
 	 &:before{
-	 	@include font-size(24);
+	 	@include font-size(25);
 	 	padding-right: 5px;
 	 }
 	 
@@ -38,7 +38,7 @@
  }
  
  .triangle{
- 	@include font-size(50);
+ 	@include font-size(40);
  	
  	position: absolute;
  	right: $gutter-width/2;
