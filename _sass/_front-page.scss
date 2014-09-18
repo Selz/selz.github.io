@@ -2,6 +2,11 @@
  * Main page body
  */
  
+ @mixin transition($property){
+ 	-webkit-transition: $property 2s;
+ 	transition: $property 2s;
+ }
+ 
  .home{
  	margin-top: $gutter-width*2;
  }
@@ -13,6 +18,10 @@
  	border-radius: $base-radius*2;
  	margin: $gutter-width auto;
  	padding: $gutter-width/2 $gutter-width/2 $gutter-width $gutter-width;
+ 	
+ 	@include transition(border-color);
+ 	
+ 	@include transition(color);
  	
  	&:hover{
  		border-color:$brand-color;
