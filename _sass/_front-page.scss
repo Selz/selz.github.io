@@ -19,7 +19,7 @@
  	}
  	
  	&:hover > .triangle,
- 	&:hover > .star{
+ 	&:hover > .star:before{
  		color:$brand-color;
  	}
  	
