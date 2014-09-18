@@ -44,6 +44,7 @@
  	
 	 &:before{
 	 	@include font-size(25);
+	 	@include transition(color .3s ease);
 	 	padding-right: 5px;
 	 	color:$gray-lightest;
 	 }
@@ -52,7 +53,7 @@
  	line-height: 0.5;
  	vertical-align: bottom;
  	
- 	@include transition(color .3s ease);
+ 	
  	
  }
  
