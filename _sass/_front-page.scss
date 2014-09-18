@@ -3,11 +3,11 @@
  */
  
  .home{
- 	margin-top:$gutter-width*2;
+ 	margin-top: $gutter-width*2;
  }
  
  .repo{
- 	display:block;
+ 	display: block;
  	position: relative;
  	border: 2px solid $gray-dark;
  	border-radius: $base-radius*2;
@@ -15,7 +15,7 @@
  	padding: $gutter-width/2;
  	
  	p{
- 		margin-right:$gutter-width*2;
+ 		margin-right: $gutter-width*2;
  	}
  	
  	span{
@@ -28,12 +28,12 @@
  	
 	 &:before{
 	 	@include font-size(24);
-	 	padding-right:5px;
+	 	padding-right: 5px;
 	 }
 	 
  	@include font-size(16);
  	line-height: 0.2;
- 	vertical-align:middle;
+ 	vertical-align: middle;
  	
  }
  
@@ -42,5 +42,6 @@
  	
  	position: absolute;
  	right: $gutter-width/2;
- 	top: 25%;
+ 	line-height: 0;
+ 	top: 50%;
  }
