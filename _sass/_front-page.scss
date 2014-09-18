@@ -2,7 +2,7 @@
  * Main page body
  */
  
- @mixin transition($transition){
+ @mixin transition($transition...){
  	-webkit-transition: $transition;
  	transition: $transition;
  }
