@@ -37,6 +37,7 @@
 	 &:before{
 	 	@include font-size(25);
 	 	padding-right: 5px;
+	 	color:$gray-lightest;
 	 }
 	 
  	@include font-size(16);
