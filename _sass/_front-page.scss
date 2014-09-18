@@ -3,8 +3,8 @@
  */
  
  @mixin transition($property){
- 	-webkit-transition: $property 2s;
- 	transition: $property 2s;
+ 	-webkit-transition: $property 500ms ease-in;
+ 	transition: $property 500ms ease-in;
  }
  
  .home{
