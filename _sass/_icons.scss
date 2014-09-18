@@ -23,24 +23,6 @@
     vertical-align: top;
 }
 
-.btn,
-.btn-faux-link,
-a {
-    [class^="icon-"],
-    [class*=" icon-"] {
-        line-height: 1;
-        text-decoration: inherit;
-        margin-right: 5px;
-        
-        &.right-icon {
-            margin-left: 5px;
-            margin-right: 0;
-        }
-        &.single-icon {
-            margin: 0;
-        }
-    }
-}
 .btn-faux-link[class*=" icon-"]::before,
 .btn-faux-link[class^="icon-"]::before,
 a[class*=" icon-"]::before,
