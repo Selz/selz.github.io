@@ -19,7 +19,7 @@
  	margin: $gutter-width auto;
  	padding: $gutter-width/2 $gutter-width/2 $gutter-width $gutter-width;
  	
- 	@include transition(border-color);
+ 	@include transition(border);
  	
  	@include transition(color);
  	
