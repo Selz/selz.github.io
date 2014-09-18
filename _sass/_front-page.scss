@@ -14,6 +14,10 @@
  	margin: $gutter-width auto;
  	padding: $gutter-width/2;
  	
+ 	&:hover{
+ 		border-color:$brand-color;
+ 	}
+ 	
  	p{
  		margin-right: $gutter-width*2;
  	}
