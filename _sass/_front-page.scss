@@ -9,7 +9,7 @@
  .repo{
  	display: block;
  	position: relative;
- 	border: 2px solid $gray-dark;
+ 	border: 2px solid $gray-light;
  	border-radius: $base-radius*2;
  	margin: $gutter-width auto;
  	padding: $gutter-width/2;
@@ -44,4 +44,5 @@
  	right: $gutter-width/2;
  	line-height: 0;
  	top: 50%;
+ 	color:$gray-light;
  }
