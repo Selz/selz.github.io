@@ -2,9 +2,9 @@
  * Main page body
  */
  
- @mixin transition($property){
- 	-webkit-transition: $property 500ms ease-in;
- 	transition: $property 500ms ease-in;
+ @mixin transition($transition){
+ 	-webkit-transition: $transition;
+ 	transition: $transition;
  }
  
  .home{
@@ -19,12 +19,10 @@
  	margin: $gutter-width auto;
  	padding: $gutter-width/2 $gutter-width/2 $gutter-width $gutter-width;
  	
- 	@include transition(border);
- 	
- 	@include transition(color);
+ 	@include transition(border .3s ease, color .3s ease);
  	
  	&:hover{
- 		border: 2px solid $brand-color;
+ 		border-color: $brand-color;
  	}
  	
  	&:hover > .triangle,
