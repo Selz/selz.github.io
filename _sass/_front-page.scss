@@ -54,6 +54,8 @@
  	line-height: 0.5;
  	vertical-align: bottom;
  	
+ 	@include transition(color);
+ 	
  }
  
  .triangle{
@@ -64,4 +66,6 @@
  	line-height: 0;
  	top: 50%;
  	color:$gray-lightest;
+ 	
+ 	@include transition(color);
  }
