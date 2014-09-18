@@ -7,11 +7,13 @@ dl, dd, ol, ul, figure {
 }
 
 // Box sizing
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
 
-/**
- * Basic styling
- */
- 
+//Basic styling
 html {
 	font-size: 62.5%; // Make 1rem = 10px;
 }
