@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html>
-
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="container-wide">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
-	<script type="text/javascript" src="/js/libs/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="/js/libs/jquery.sharer.js"></script>
-	<script type="text/javascript" src="/js/scripts.js"></script>
-  </body>
-
+	{% include head.html %}
+	
+	<body>
+		{% include header.html %}
+		
+		<main class="container-wide">
+		{{ content }}
+		</main>
+		
+		{% include footer.html %}
+		
+		<script src="/js/libs/jquery-1.11.1.min.js"></script>
+		<script src="/js/libs/jquery.sharer.js"></script>
+		<script src="/js/scripts.js"></script>
+	</body>
 </html>
