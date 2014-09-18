@@ -18,6 +18,10 @@
  		border-color:$brand-color;
  	}
  	
+ 	&:hover > .triangle{
+ 		color:$brand-color;
+ 	}
+ 	
  	p{
  		margin-right: $gutter-width*2;
  	}
