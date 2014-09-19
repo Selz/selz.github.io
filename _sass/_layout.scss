@@ -6,7 +6,7 @@
 // Site header
 .site-header {
 	// border-bottom: 1px solid $gray-light;
-	height: 360px;
+	padding: $gutter-width * 2 $gutter-width;
 	background: $brand-color;
 	
 	// Positioning context for the mobile navigation icon
@@ -17,7 +17,6 @@
 	-webkit-font-smoothing: antialiased;
 	
 	h1 {
-		padding-top: $gutter-width/2;
 		color: $text-color-light;
 		text-align: center;
 		
