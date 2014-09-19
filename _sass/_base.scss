@@ -1,3 +1,9 @@
+ @mixin transition($transition...){
+ 	-webkit-transition: $transition;
+ 	transition: $transition;
+ }
+
+
 // Reset some basic elements
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
@@ -77,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: $brand-color;
     text-decoration: none;
-    
+    @include transition(color .3s ease);
 
     &:hover {
         color: $gray-dark;
