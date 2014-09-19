@@ -18,13 +18,17 @@ html {
 	font-size: 62.5%; // Make 1rem = 10px;
 }
 
-body {
+body,
+button, 
+input {
 	@include font-size($base-font-size);
 	font-family: $base-font-family;
 	line-height: $base-line-height;
+}
+body {
 	color: $text-color;
 	background-color: $background-color;
-	-webkit-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;	
 }
 
 // Set `margin-bottom` to maintain vertical rhythm
