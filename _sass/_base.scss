@@ -75,11 +75,12 @@ h1, h2, h3, h4, h5, h6 {
 
 // Links
 a {
-    color: $gray-dark;
+    color: $brand-color;
     text-decoration: none;
+    
 
     &:hover {
-        color: $brand-color;
+        color: $gray-dark;
     }
 }
 
@@ -97,11 +98,7 @@ blockquote {
     }
 }
 
-
-
-/**
- * Code formatting
- */
+// Code formatting
 pre,
 code {
     font-size: 15px;
