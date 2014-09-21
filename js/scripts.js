@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
 			url: url,
 			text: text,
 			enableHover: false,
-			enableTracking: true, 
+			enableTracking: false, 
 			//urlCurl: "", // TODO: We need to create a script to act as a proxy to get counts
 			click: function(api) {
 				api.simulateClick(); // Adds one to the count
